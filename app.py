@@ -58,22 +58,6 @@ def build_prompt(resume_text: str, job_description: str) -> str:
     job_context = job_description.strip() or "No job description supplied. Assess general resume quality and ATS-readiness."
     return 
 
-  "strengths": ["..."],
-  "improvements": [
-    {{"priority": "High | Medium | Low", "action": "specific action", "why": "why it helps", "example": "truthful example or template; do not invent facts"}}
-  ],
-  "keywords_to_consider": ["keywords supported by the job description or clearly relevant to the role"],
-  "formatting_notes": ["..."],
-  "rewritten_summary": "A suggested professional summary using only facts present in the resume; if insufficient facts, provide a fill-in template instead."
-}}
-
-JOB DESCRIPTION:
-{job_context[:12_000]}
-
-RESUME TEXT:
-{resume_text}
-
-
 def parse_json_response(response_text: str) -> dict[str, Any]:
    
     cleaned = response_text.strip()
