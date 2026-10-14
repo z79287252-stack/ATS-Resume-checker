@@ -56,8 +56,7 @@ def extract_resume_text(uploaded_file: Any) -> str:
 
 def build_prompt(resume_text: str, job_description: str) -> str:
     job_context = job_description.strip() or "No job description supplied. Assess general resume quality and ATS-readiness."
-    return f"""You are a careful resume reviewer. Review the resume for ATS-readiness and useful improvements.
-
+    return 
 Important rules:
 - The score is an ESTIMATE for guidance, not a real score from any specific ATS vendor.
 - Judge only job-relevant skills, experience, evidence, clarity, and formatting. Do not infer or score age, gender, race, religion, disability, nationality, or other protected/personal traits.
