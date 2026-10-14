@@ -95,7 +95,7 @@ RESUME TEXT:
 
 
 def parse_json_response(response_text: str) -> dict[str, Any]:
-    """Parse model JSON, tolerating an occasional Markdown code fence."""
+   
     cleaned = response_text.strip()
     if cleaned.startswith("```"):
         lines = cleaned.splitlines()
