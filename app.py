@@ -57,13 +57,6 @@ def extract_resume_text(uploaded_file: Any) -> str:
 def build_prompt(resume_text: str, job_description: str) -> str:
     job_context = job_description.strip() or "No job description supplied. Assess general resume quality and ATS-readiness."
     return 
-Important rules:
-- The score is an ESTIMATE for guidance, not a real score from any specific ATS vendor.
-- Judge only job-relevant skills, experience, evidence, clarity, and formatting. Do not infer or score age, gender, race, religion, disability, nationality, or other protected/personal traits.
-- Never invent qualifications, employment, education, metrics, or skills. Suggestions must be truthful and conditional where facts are missing.
-- If a job description is supplied, assess alignment with it. If not, assess general ATS-readiness.
-- Give practical, specific, constructive feedback. Do not guarantee interviews or hiring outcomes.
-- Return valid JSON only, matching this schema exactly. Scores must be integers. Overall score and each category score must be between 0 and 100.
 
 JSON schema:
 {{
