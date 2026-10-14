@@ -58,18 +58,6 @@ def build_prompt(resume_text: str, job_description: str) -> str:
     job_context = job_description.strip() or "No job description supplied. Assess general resume quality and ATS-readiness."
     return 
 
-JSON schema:
-{{
-  "overall_score": 0,
-  "score_label": "Needs work | Fair | Good | Strong",
-  "summary": "short overall assessment",
-  "score_breakdown": [
-    {{"category": "Keyword alignment", "score": 0, "max_score": 100, "feedback": "..."}},
-    {{"category": "Experience and achievements", "score": 0, "max_score": 100, "feedback": "..."}},
-    {{"category": "Skills relevance", "score": 0, "max_score": 100, "feedback": "..."}},
-    {{"category": "Structure and readability", "score": 0, "max_score": 100, "feedback": "..."}},
-    {{"category": "ATS-friendly formatting", "score": 0, "max_score": 100, "feedback": "..."}}
-  ],
   "strengths": ["..."],
   "improvements": [
     {{"priority": "High | Medium | Low", "action": "specific action", "why": "why it helps", "example": "truthful example or template; do not invent facts"}}
